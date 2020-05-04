@@ -1,0 +1,162 @@
+// regole generali
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $textColorPrimary;
+  font-family: Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+list-style-type: none;
+}
+
+
+
+// @mixin
+
+// bottone google header
+@mixin bottone-small{
+  font-size: 14px;
+  color: $textColorSecondary;
+  background-color: #ffffff;;
+  border-radius: 7px;
+  padding: 7px;
+  cursor: pointer;
+  box-shadow: none;
+  border-color: $textColorSecondary;
+
+  img {
+    width: 20px;
+    vertical-align: middle;
+  }
+}
+
+// bottoni google e slack prima e ottava section
+@mixin bottone-big{
+  font-size: 14px;
+  color: #ffffff;;
+  background-color: $textColorSecondary;
+  border-radius: 7px;
+  padding: 7px 15px;
+  cursor: pointer;
+  box-shadow: none;
+  margin: 30px 0 20px;
+
+  img {
+    width: 20px;
+    vertical-align: middle;
+  }
+}
+
+// seconda e terza section con background-color rosa
+@mixin firstSectionRosa {
+
+  background-color: $backgroundColor;
+  padding: 90px 90px 100px;
+
+  div {
+    display: flex;
+    justify-content: center;
+
+    h3 {
+      font-size: $fontH3;
+      padding: 0 250px;
+      text-align: center;
+    }
+  }
+
+  .container-img {
+    display: flex;
+    margin-top: 70px;
+
+    .img-testo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        width: 130px;
+        height: 90px;
+        margin-bottom: 25px;
+      }
+
+      p {
+        font-size: 16px;
+        padding: 10px 20px;
+        text-align: center;
+        margin-bottom: 80px;
+      }
+    }
+  }
+
+  img {
+    width: 300px;
+    padding-bottom: 20px;
+  }
+}
+
+// quarta quinta sesta e settima section
+@mixin team {
+
+  display: flex;
+  padding: 90px 90px 100px;
+
+  .screen img {
+    width: 650px;
+  }
+
+  .info {
+
+    h3 {
+      font-size: $fontH3;
+    }
+
+    p {
+      font-size: 20px;
+      margin-top: 30px;
+      font-weight: lighter;
+      line-height: 30px;
+      margin-bottom: 40px;
+    }
+
+    a {
+      font-size: 20px;
+      color: $textColorSecondary;
+
+      i {
+        color: $textColorSecondary;
+      }
+    }
+
+    .screen-small {
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 260px;
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+// link mail prima e ottava section
+@mixin linkMail {
+
+  a {
+    font-size: 13px;
+
+    &:hover {
+      color: $textColorSecondary;
+
+      i {
+        color: $textColorSecondary;
+      }
+    }
+  }
+}

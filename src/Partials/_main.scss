@@ -1,0 +1,169 @@
+main {
+  margin-top: 170px;
+
+  // prima section -- jumbotron
+  .jumbotron {
+    display: flex;
+    width: 84vw;
+    margin-left: 8vw;
+    margin-bottom: 130px;
+
+    h1 {
+      font-size: 50px;
+      line-height: 70px;
+      font-weight: lighter;
+    }
+
+    h4 {
+      margin-top: 30px;
+      font-size: 20px;
+      font-weight: lighter;
+      line-height: 30px;
+    }
+
+    .btn {
+      @include bottone-big;
+    }
+
+    span {
+      font-size: 13px;
+      margin: 0 15px;
+      opacity: 0.5;
+    }
+
+    @include linkMail;
+
+    .screen {
+      img {
+        width: 600px;
+      }
+    }
+  }
+
+  // seconda section -- description-before
+  .description-before {
+    border-bottom: 1px solid $borderColor;
+    @include firstSectionRosa;
+  }
+
+  // terza section -- description-after
+  .description-after {
+    @include firstSectionRosa;
+
+    .container-img {
+      .img-testo {
+        &:last-child {
+          img {
+            width: 60px;
+            height: 110px;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+    div {
+      &:last-child {
+        h3 {
+          margin-top: 90px;
+        }
+      }
+    }
+  }
+
+  // quarta section -- feedback
+  .feedback {
+    @include team;
+  }
+
+  // quinta section -- surveys
+  .surveys {
+    @include team;
+  }
+
+  // sesta section -- reviews
+  .reviews {
+    @include team;
+  }
+
+  // settima section -- recognitions
+  .recognitions {
+    @include team;
+  }
+
+  // ottava section -- co-founders
+  .co-founders {
+    background-color: $backgroundColor;
+    padding: 90px 90px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .titolo-container-experience {
+      margin-bottom: 35px;
+
+      h2 {
+        font-size: 35px;
+        line-height: 60px;
+      }
+
+      img {
+        width: 33px;
+      }
+    }
+
+    .container-experience {
+      background-color: white;
+      border: 1px solid $borderColor;
+      border-radius: 7px;
+      padding: 25px 35px;
+      width: 650px;
+      position: relative;
+
+      >img {
+        position: absolute;
+        width: 37px;
+        height: 39px;
+        top: -23px;
+        left: -1px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 30px;
+      }
+
+      .container-experience-img {
+        display: flex;
+
+        img {
+          width: 45px;
+          height: 45px;
+          margin-right: 7px;
+        }
+
+        .container-experience-img-text {
+          p {
+            font-size: 12px;
+            line-height: 20px;
+
+            &:first-child {
+              color: $textColorSecondary;
+            }
+          }
+        }
+      }
+    }
+
+    .btn {
+      @include bottone-big;
+    }
+
+    span {
+      font-size: 13px;
+      margin: 0 15px;
+      opacity: 0.5;
+    }
+
+    @include linkMail;
+  }
+}
